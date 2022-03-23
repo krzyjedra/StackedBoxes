@@ -1,10 +1,10 @@
 object StackedBoxes extends App {
   val boxes = args.filter(_.length % 2 == 1).sortBy(_.length)
   val widthStack = boxes.last.length
-  boxes.foreach(name => {
+  boxes.foreach { name =>
     println(rowToString("-" * name.length, widthStack, '+'))
     println(rowToString(name, widthStack, '|'))
-  })
+  }
   println(rowToString("-" * widthStack, widthStack, '+'))
 
 
