@@ -6,11 +6,9 @@ object StackedBoxes extends App {
     println(rowToString(name, widthStack, '|'))
   }
   println(rowToString("-" * widthStack, widthStack, '+'))
-//a
 
   def rowToString(name: String, maxWidth: Int, separator: Char): String = {
     val offset = (maxWidth - name.length) / 2
     " " * offset + separator.toString + name + separator.toString + " " * offset
   }
-
 }
